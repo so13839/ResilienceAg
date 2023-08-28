@@ -1,4 +1,5 @@
 library(shiny)
+model <- readRDS("model.RDS")
 # Server
 server <- function(input, output) {
   output$yield_plot <- renderPlot({
@@ -35,5 +36,6 @@ server <- function(input, output) {
 # Create a linear regression model
 #model <- lm(yield ~ rainfall + nevi, data = data)
 
+
 # Run the app
-shinyApp(ui, server)
+#shinyApp(ui, server)
